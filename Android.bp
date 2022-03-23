@@ -1,6 +1,5 @@
 /**
- * Copyright (C) 2019-2020 The LineageOS Project
- * Copyright (C) 2019-2020 The PixelExperience Project
+ * Copyright (C) 2019-2022 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,6 +17,17 @@
  */
 
 soong_namespace {
+}
+
+android_app_import {
+	name: "EngineerMode",
+	owner: "xiaomi",
+	apk: "proprietary/priv-app/EngineerMode/EngineerMode.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	privileged: true,
 }
 
 android_app_import {
@@ -106,5 +116,41 @@ dex_import {
 	name: "mediatek-telephony-common",
 	owner: "xiaomi",
 	jars: ["proprietary/framework/mediatek-telephony-common.jar"],
+}
+
+dex_import {
+	name: "vendor.xiaomi.hardware.misys-V1.0-java",
+	owner: "xiaomi",
+	jars: ["proprietary/framework/vendor.xiaomi.hardware.misys-V1.0-java.jar"],
+}
+
+dex_import {
+	name: "vendor.xiaomi.hardware.misys-V2.0-java",
+	owner: "xiaomi",
+	jars: ["proprietary/framework/vendor.xiaomi.hardware.misys-V2.0-java.jar"],
+}
+
+dex_import {
+	name: "vendor.xiaomi.hardware.misys.V3_0",
+	owner: "xiaomi",
+	jars: ["proprietary/framework/vendor.xiaomi.hardware.misys.V3_0.jar"],
+}
+
+dex_import {
+	name: "vendor.xiaomi.hardware.mtdservice-V1.0-java",
+	owner: "xiaomi",
+	jars: ["proprietary/framework/vendor.xiaomi.hardware.mtdservice-V1.0-java.jar"],
+}
+
+dex_import {
+	name: "vendor.xiaomi.hardware.mtdservice-V1.1-java",
+	owner: "xiaomi",
+	jars: ["proprietary/framework/vendor.xiaomi.hardware.mtdservice-V1.1-java.jar"],
+}
+
+dex_import {
+	name: "vendor.xiaomi.hardware.vsimapp-V1.0-java",
+	owner: "xiaomi",
+	jars: ["proprietary/framework/vendor.xiaomi.hardware.vsimapp-V1.0-java.jar"],
 }
 
